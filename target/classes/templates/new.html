@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Persons</title>
+</head>
+<body>
+	<div class="container">
+		<h2>New Person</h2>
+		<form th:action="@{/persons}" th:method="post">
+			<div>
+				<label>name</label>
+				<input type="text" name="name" />
+			</div>
+			<div>
+				<label>address</label>
+				<input type="text" name="address" />
+			</div>
+			<button type="submit">Save</button>
+		</form>
+		<div class="pull-right">
+			<a class="btn btn-link" th:href="@{/persons}">List</a>
+		</div>
+	</div>
+</body>
+</html>
